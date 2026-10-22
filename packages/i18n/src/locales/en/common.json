@@ -1,0 +1,76 @@
+{
+  "app": {
+    "name": "Goalz",
+    "tagline": "Set it. Track it. Grow it."
+  },
+  "action": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "done": "Done",
+    "back": "Back",
+    "next": "Next",
+    "edit": "Edit",
+    "delete": "Delete",
+    "retry": "Try again",
+    "log": "Log it",
+    "undo": "Undo"
+  },
+  "status": {
+    "loading": "Loading…",
+    "saving": "Saving…",
+    "error": "Something went wrong. Your goals are safe.",
+    "offline": "You're offline. We'll save changes when you're back online.",
+    "empty": "Nothing here yet."
+  },
+  "progress": {
+    "percent": "{{value}}% complete",
+    "ofTarget": "{{current}} of {{target}}",
+    "consistency": "Done on {{days}} of the last {{total}} days"
+  },
+  "encourage": {
+    "pickUp": "Welcome back. Pick up where you left off.",
+    "pickUp_simple": "Welcome back. Let's carry on.",
+    "pickUp_working": "Welcome back. One quick log keeps you moving."
+  },
+  "field": {
+    "required": "Required",
+    "optional": "Optional",
+    "error": "Error: {{message}}"
+  },
+  "a11y": {
+    "selected": "Selected",
+    "closeSheet": "Close",
+    "progressRing": "{{label}}: {{value}}% complete"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "Match my device"
+  },
+  "mode": {
+    "standard": { "name": "Standard", "description": "Every feature and life area." },
+    "teen": { "name": "Teen", "description": "Clean and focused on school, skills and fitness." },
+    "working": { "name": "Working", "description": "Quick logging for busy days." },
+    "simple": { "name": "Simple", "description": "Bigger text, bigger buttons, fewer screens." }
+  },
+  "area": {
+    "career": "Career",
+    "financial": "Financial",
+    "investments": "Investments",
+    "health": "Health",
+    "fitness": "Fitness",
+    "education": "Education",
+    "academics": "Academics",
+    "hobbies": "Hobbies",
+    "social": "Social skills",
+    "logic": "Logical thinking",
+    "analytics": "Analytics & problem solving",
+    "mindfulness": "Mindfulness & wellbeing",
+    "family": "Family & relationships"
+  },
+  "disclaimer": {
+    "financial": "Goalz helps you track your own goals. It doesn't give financial or investment advice.",
+    "health": "Goalz helps you track your own goals. It doesn't give medical advice."
+  }
+}
