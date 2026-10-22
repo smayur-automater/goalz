@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      storybook:
+        patterns: ['storybook', '@storybook/*']
+      testing:
+        patterns: ['vitest', '@vitest/*', '@testing-library/*', 'jsdom', 'playwright', 'axe-core']
+      lint:
+        patterns: ['eslint', '@eslint/*', 'typescript-eslint', 'eslint-plugin-*', 'prettier']
+    ignore:
+      # React, React Native and react-native-web move in lockstep with the Expo SDK.
+      - dependency-name: 'react'
+      - dependency-name: 'react-dom'
+      - dependency-name: 'react-native'
+      - dependency-name: 'react-native-web'
+      - dependency-name: 'react-native-svg'
+      - dependency-name: '@react-native/*'
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

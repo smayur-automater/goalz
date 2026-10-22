@@ -1,3 +1,9 @@
 packages:
   - 'apps/*'
   - 'packages/*'
+
+auditConfig:
+  ignoreGhsas:
+    # braces (via Metro, React Native's dev bundler): build-time only, not shipped
+    # in the app, and no patched release exists. Re-check monthly. See DECISIONS.md ADR-009.
+    - GHSA-vfj7-8cjw-p6xm
