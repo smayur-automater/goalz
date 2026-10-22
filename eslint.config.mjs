@@ -1,9 +1,9 @@
 // @ts-check
 import js from '@eslint/js';
-import i18next from 'eslint-plugin-i18next';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
+import goalz from './tools/eslint-plugin-goalz.mjs';
 
 export default tseslint.config(
   {
@@ -30,9 +30,9 @@ export default tseslint.config(
     // User-facing UI must take every string from i18n. Stories and tests are exempt.
     files: ['packages/ui/src/**/*.tsx', 'apps/**/*.tsx'],
     ignores: ['**/*.stories.tsx', '**/*.test.tsx'],
-    plugins: { i18next },
+    plugins: { goalz },
     rules: {
-      'i18next/no-literal-string': ['error', { mode: 'jsx-text-only' }],
+      'goalz/no-literal-ui-string': 'error',
     },
   },
 );
