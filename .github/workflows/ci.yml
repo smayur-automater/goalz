@@ -45,7 +45,7 @@ jobs:
       - run: pnpm --filter @goalz/ui exec playwright install --with-deps chromium
       - run: pnpm build-storybook
       - run: pnpm --filter @goalz/ui a11y
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: storybook
           path: packages/ui/storybook-static
