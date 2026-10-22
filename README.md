@@ -1,6 +1,6 @@
 # Goalz
 
-*Set it. Track it. Grow it. Every part of your life, in one simple place.*
+_Set it. Track it. Grow it. Every part of your life, in one simple place._
 
 A goal-setting and life-progress app for iOS, Android and web. Launching in Australia first.
 

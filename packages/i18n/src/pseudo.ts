@@ -17,7 +17,7 @@ const ACCENTS: Record<string, string> = {
   Y: 'Ý',
 };
 
-const RLM = '‏';
+const RLM = '\u200F';
 
 function transform(text: string, rtl: boolean): string {
   // Keep {{placeholders}} and nesting intact; only rewrite literal text.
