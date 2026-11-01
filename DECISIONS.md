@@ -63,3 +63,27 @@ Each entry records what was decided, why, and what it costs. Newest last.
 - Gitleaks runs as the free CLI container (the GitHub Action needs a paid licence for organisations).
 - CodeQL and Dependency Review need GitHub Advanced Security on private repos, which is a **paid add-on**. They are skipped automatically while the repo is private. `pnpm audit` and Dependabot run regardless.
 - Actions are pinned to major versions for now; pin to commit SHAs in Milestone 8 (hardening).
+
+## ADR-012: Database access model
+
+- Every user-owned row carries `profile_id`. Child rows (check-ins, milestones, reminders) use composite foreign keys `(goal_id, profile_id)`, so data can't cross accounts even if an access rule were wrong.
+- Access-rule helpers are `SECURITY DEFINER` functions in an unexposed `private` schema, with `search_path` pinned. Tests fail if any table lacks RLS or a policy, or if a private function is callable anonymously.
+- Profiles are created only by the sign-up trigger. Clients may update settings columns only (column-level grants).
+- Each user gets their own copy of the 13 default life areas at sign-up, so renaming, hiding and reordering are plain updates.
+- Reference data is applied by a migration (not only a seed), so production has it. It is generated with the English strings from `tools/gen-reference-data.py`.
+- Region consent ages in `region_rules` are a starting point and **need legal review** per market.
+
+## ADR-013: Database tests run on plain Postgres
+
+- No Docker here, so `supabase start` isn't available. Tests run against plain Postgres with a small stand-in for Supabase's `auth` and `storage` schemas (`supabase/tests/supabase-stub.sql`), using the real `anon` / `authenticated` roles and JWT claims.
+- CI uses a `postgres:17` service, the same major version as the Supabase project.
+- **Trade-off:** the stand-in could differ from real Supabase in edge cases. After the migrations are applied, Supabase's security advisors are run against the real project as a second check.
+
+## ADR-014: Sign-in
+
+- Email magic link that also contains a 6-digit code (codes work when a link opens the wrong browser, and are easier for some users), plus Sign in with Apple and Google. No passwords. PKCE flow.
+- **Owner to-do before launch:**
+  - Custom SMTP, because Supabase's built-in email is heavily rate-limited (a cost, e.g. Resend or Postmark).
+  - Apple Services ID and key.
+  - Google OAuth client IDs.
+  - Production redirect URLs.
