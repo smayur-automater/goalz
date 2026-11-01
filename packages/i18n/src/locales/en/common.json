@@ -49,10 +49,22 @@
     "system": "Match my device"
   },
   "mode": {
-    "standard": { "name": "Standard", "description": "Every feature and life area." },
-    "teen": { "name": "Teen", "description": "Clean and focused on school, skills and fitness." },
-    "working": { "name": "Working", "description": "Quick logging for busy days." },
-    "simple": { "name": "Simple", "description": "Bigger text, bigger buttons, fewer screens." }
+    "standard": {
+      "name": "Standard",
+      "description": "Every feature and life area."
+    },
+    "teen": {
+      "name": "Teen",
+      "description": "Clean and focused on school, skills and fitness."
+    },
+    "working": {
+      "name": "Working",
+      "description": "Quick logging for busy days."
+    },
+    "simple": {
+      "name": "Simple",
+      "description": "Bigger text, bigger buttons, fewer screens."
+    }
   },
   "area": {
     "career": "Career",
@@ -72,5 +84,116 @@
   "disclaimer": {
     "financial": "Goalz helps you track your own goals. It doesn't give financial or investment advice.",
     "health": "Goalz helps you track your own goals. It doesn't give medical advice."
+  },
+  "template": {
+    "career_certification": "Earn a certification",
+    "career_promotion": "Work towards a promotion",
+    "career_network": "Reach out to one new contact a week",
+    "financial_emergency_fund": "Build an emergency fund",
+    "financial_pay_off_debt": "Pay off a debt",
+    "financial_house_deposit": "Save for a house deposit",
+    "investments_invest_monthly": "Invest every month",
+    "investments_portfolio_target": "Reach a portfolio target",
+    "investments_diversify": "Diversify my investments",
+    "health_sleep_7": "Sleep 7 or more hours",
+    "health_water": "Drink 8 glasses of water",
+    "health_checkup": "Book a health check-up",
+    "fitness_run_5k": "Run 5 km",
+    "fitness_steps_10k": "Walk 10,000 steps a day",
+    "fitness_strength_3x": "Strength training 3 times a week",
+    "education_finish_course": "Finish a course",
+    "education_language": "Practise a new language for 15 minutes",
+    "education_read_20": "Read 20 books this year",
+    "academics_improve_grade": "Improve a grade",
+    "academics_study_schedule": "Study 5 days a week",
+    "academics_exam_prep": "Prepare for an exam",
+    "hobbies_guitar": "Practise guitar 3 times a week",
+    "hobbies_paint": "Paint once a week",
+    "hobbies_garden": "Spend time in the garden twice a week",
+    "social_call_friend": "Call a friend every week",
+    "social_public_speaking": "Get comfortable speaking in public",
+    "social_join_club": "Join a club or group",
+    "logic_daily_puzzle": "Do a puzzle every day",
+    "logic_chess": "Play chess 3 times a week",
+    "logic_coding": "Do a coding exercise 3 times a week",
+    "analytics_spreadsheets": "Learn spreadsheets",
+    "analytics_data_course": "Complete a data course",
+    "analytics_case_problem": "Solve one case problem a week",
+    "mindfulness_meditate": "Meditate for 10 minutes",
+    "mindfulness_journal": "Write in a journal",
+    "mindfulness_screen_time": "Keep screen time under 2 hours",
+    "family_dinners": "Family dinner 3 times a week",
+    "family_date_night": "Date night twice a month",
+    "family_quality_time": "Quality time with family every week"
+  },
+  "achievement": {
+    "first_goal": {
+      "title": "First step",
+      "description": "You set your first goal."
+    },
+    "first_check_in": {
+      "title": "Off you go",
+      "description": "You logged your first check-in."
+    },
+    "consistent_week": {
+      "title": "A steady week",
+      "description": "You checked in on all 7 days of a week."
+    },
+    "consistent_month": {
+      "title": "Rock solid",
+      "description": "You kept 80% consistency over 30 days."
+    },
+    "progress_25": {
+      "title": "A quarter of the way",
+      "description": "You reached 25% of a goal."
+    },
+    "progress_50": {
+      "title": "Halfway there",
+      "description": "You reached 50% of a goal."
+    },
+    "progress_75": {
+      "title": "Nearly there",
+      "description": "You reached 75% of a goal."
+    },
+    "goal_complete": {
+      "title": "Goal reached",
+      "description": "You completed a goal."
+    },
+    "reflect_4_weeks": {
+      "title": "Thoughtful",
+      "description": "You reflected four weeks in a row."
+    },
+    "balanced_5_areas": {
+      "title": "Well rounded",
+      "description": "You made progress in five life areas in one week."
+    }
+  },
+  "auth": {
+    "title": "Sign in to Goalz",
+    "emailLabel": "Email address",
+    "sendLink": "Email me a sign-in link",
+    "checkEmail": "Check your email. We sent a link and a 6-digit code to {{email}}.",
+    "codeLabel": "6-digit code",
+    "verifyCode": "Sign in with code",
+    "continueWithApple": "Continue with Apple",
+    "continueWithGoogle": "Continue with Google",
+    "noPassword": "No password needed.",
+    "error": {
+      "invalid_email": "That email address doesn't look right. Please check it.",
+      "invalid_code": "That code didn't work or has expired. Ask for a new one.",
+      "rate_limited": "Too many tries. Please wait a minute, then try again.",
+      "network": "Can't reach Goalz. Check your connection and try again.",
+      "cancelled": "Sign-in was cancelled.",
+      "unknown": "Something went wrong signing in. Please try again."
+    }
+  },
+  "account": {
+    "exportTitle": "Download my data",
+    "exportDescription": "Get a copy of everything in your account, as JSON and spreadsheet (CSV) files.",
+    "deleteTitle": "Delete my account",
+    "deleteWarning": "This permanently deletes your account, goals, check-ins, photos and reflections. It can't be undone.",
+    "deleteConfirmLabel": "Type DELETE to confirm",
+    "deleteButton": "Delete everything",
+    "deleted": "Your account has been deleted."
   }
 }
