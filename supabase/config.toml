@@ -1,0 +1,57 @@
+# Supabase CLI configuration for local development (`supabase start`, needs Docker).
+# The hosted project (lrhbnduacmrfixzgzcgp, Sydney) is configured in the dashboard;
+# keep the auth settings below in step with it. Secrets come from env(), never this file.
+
+project_id = "goalz"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 17
+
+[storage]
+enabled = true
+file_size_limit = "10MiB"
+
+[auth]
+enabled = true
+# Expo web dev server. Production: https://app.<domain> once the domain is chosen.
+site_url = "http://localhost:8081"
+additional_redirect_urls = [
+  "http://localhost:8081/auth/callback",
+  "goalz://auth/callback",
+]
+jwt_expiry = 3600
+enable_refresh_token_rotation = true
+enable_signup = true
+enable_anonymous_sign_ins = false
+
+# Magic link / one-time code by email. No passwords.
+[auth.email]
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = false
+otp_length = 6
+otp_expiry = 3600
+
+# Needs an Apple Developer account: Services ID + Sign in with Apple key.
+[auth.external.apple]
+enabled = false
+client_id = "env(SUPABASE_AUTH_APPLE_CLIENT_ID)"
+secret = "env(SUPABASE_AUTH_APPLE_SECRET)"
+
+# Needs Google Cloud OAuth client IDs (web, iOS, Android).
+[auth.external.google]
+enabled = false
+client_id = "env(SUPABASE_AUTH_GOOGLE_CLIENT_ID)"
+secret = "env(SUPABASE_AUTH_GOOGLE_SECRET)"
+skip_nonce_check = false
+
+[functions.delete-account]
+verify_jwt = true
