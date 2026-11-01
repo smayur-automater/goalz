@@ -19,6 +19,11 @@ export default tseslint.config(
     },
   },
   {
+    // In tests, `rows[0]!` failing loudly is the desired outcome.
+    files: ['**/*.test.ts', '**/*.test.tsx', 'supabase/tests/**/*.ts'],
+    rules: { '@typescript-eslint/no-non-null-assertion': 'off' },
+  },
+  {
     files: ['**/*.tsx'],
     plugins: { 'react-hooks': reactHooks },
     rules: {
