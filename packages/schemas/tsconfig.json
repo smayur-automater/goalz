@@ -1,0 +1,7 @@
+{
+  "extends": "@goalz/config/tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": ["src"]
+}

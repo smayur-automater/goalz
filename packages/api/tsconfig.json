@@ -1,0 +1,4 @@
+{
+  "extends": "@goalz/config/tsconfig.base.json",
+  "include": ["src"]
+}
